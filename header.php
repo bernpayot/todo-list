@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="flex-header">
-        <div class="brand"><img src="./assets/check.svg" alt="Logo"> Taskly</div>
+        <div class="brand"> <!-- <img src="./assets/check.svg" alt="Logo"> --> Taskly</div>
     </header>
    
 
