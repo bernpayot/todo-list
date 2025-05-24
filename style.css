@@ -1,5 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=WDXL+Lubrifont+TC&display=swap');
+
 body {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    background-color: rgb(33,37,41,1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #f8f9fa;
 }
+
+.flex-header {
+    box-sizing: border-box;    
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    padding: 1.3rem 2rem;
+    color: #f8f9fa;
+    font-family: 'WDXL Lubrifont TC', 'Roboto', Helvetica, Arial, sans-serif;
+    margin-top: 0.8rem;
+    border-bottom: 2px solid #f8f9fa;
+}
+
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.4rem;
+    font-weight: bold;
+    gap: 0.5rem;
+}
+
+main {
+    box-sizing: border-box;
+    width: 60%;
+    margin-top: 0.8rem;
+}
+
+.date-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.day {
+    font-size: 3.2rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.add-task-container {
+    display: flex;
+    justify-content: center;
+    padding: 1.2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .flex-header {
+        width: 100%;
+        padding: 1rem;
+    }
+    main {
+        max-width: 100vw;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .brand {
+        font-size: 2.5rem;
+    }
+    .day {
+        font-size: 2.5rem;
+    }
+}
+
+
+
