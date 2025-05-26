@@ -22,7 +22,6 @@
 
                     try {
                         mysqli_query($conn, $sql);
-                        echo "Task created!";
                     } catch (mysqli_sql_exception) {
                         echo "Error!";
                     }
@@ -30,6 +29,33 @@
             }
         ?>
     </div>
+
+    <div class="task-container">
+            <?php
+                $sql = "SELECT * FROM tasks";
+                try {
+                    $result = mysqli_query($conn, $sql);
+
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                        ?>
+                            <div class="task-card" style="display:flex; justify-content: center;">
+                                <h2> <?php echo $row["description"]; ?> </h2>
+                            </div>
+                        <?php    
+                        }
+                    } else {
+                        ?>
+                            <div class="no-tasks" style="display: flex; justify-content: center; text-align: center;">
+                                <h2> There are no tasks currently. </h2>
+                            </div>                            
+                        <?php
+                    }
+                } catch (mysqli_sql_exception) {
+                    echo "Error!";
+                }
+            ?>    
+    </div>    
 </main>
 
 <?php
